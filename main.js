@@ -1,0 +1,10 @@
+let widths = prompt("Nhập chiều rộng");
+let heights = prompt("Nhập chiều dài");
+let widthparse = parseInt(widths);
+document.write("Chieu rong: " + widthparse + "m");
+let heightparse = parseInt(heights);
+document.write("</br>");
+document.write("Chieu dai : " + heightparse + "m");
+document.write("</br>");
+let total = widthparse * heightparse;
+document.write("Dien tich hinh chu nhat : " + total + " m2");
