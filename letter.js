@@ -24,9 +24,9 @@ document.write("</br>");
 document.write(
   address +
     " , " +
-    " ngày " +
+    " Ngày " +
     timedate +
-    " tháng " +
+    " Tháng " +
     timemonth +
     " Năm " +
     timeyear
