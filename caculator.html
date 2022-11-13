@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Caculator</h2>
+        <input id="input1" type="number">
+        <input id="input2" type="number" >
+        <br>
+        <button onclick="add()" >Addition(+)</button>
+        <button  onclick="sub()">Subtraction(-)</button>
+        <button  onclick="mul()">Multiplication(x)</button>
+        <button  onclick="div()">Division(/)</button>
+       <h2 id="result">Kết quả là</h2>
+        
+
+    </div>
+    <script>
+        let a = +document.getElementById("input1").value
+        let b = +document.getElementById("input2").value
+        var res = document.getElementById("result")
+
+        function add(){
+            let a = +document.getElementById("input1").value
+        let b = +document.getElementById("input2").value
+        var res = document.getElementById("result")
+        let c = a + b
+            res.innerHTML= "Kết quả là :" + a + " + " + b + " = " + c
+          
+        }
+        function sub(){
+            let a = +document.getElementById("input1").value
+        let b = +document.getElementById("input2").value
+        var res = document.getElementById("result")
+            let w = a - b
+            res.innerHTML= "Kết quả là :" + a + " - " + b + " = "+ w
+        }
+        function mul(){
+            let a = +document.getElementById("input1").value
+        let b = +document.getElementById("input2").value
+        var res = document.getElementById("result")
+            let z = a * b
+            res.innerHTML= "Kết quả là :" + a + " * " + b + " = "+ z
+        }
+        function div(){
+            let a = +document.getElementById("input1").value
+        let b = +document.getElementById("input2").value
+        var res = document.getElementById("result")
+            let m = a / b
+            res.innerHTML= "Kết quả là : "+ a + " : " + b + " = " + m
+        }
+    </script>
+</body>
+</html>
