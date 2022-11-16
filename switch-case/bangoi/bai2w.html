@@ -8,15 +8,9 @@
 </head>
 <body>
     <script>
-        let number = +prompt('nhập vào một số')
-        switch(number){
-            case 0:
-                alert(0)
-            case 5:
-                alert(1)    
-             case -5:
-                alert(-1)    
-        }
+        let wri = prompt('nhập chuỗi', '')
+        var disp = (wri === 'Employee') ? "Hello" : (wri ==='Director') ? 'Greetings' : ( wri ==='') ? 'No login':'';
+        alert (disp);
     </script>
 </body>
 </html>
