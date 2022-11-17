@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Giá Hoa Quả
+    </h2>
+    <h3>Danh sách các loại hoa quả</h3>
+   <ul>
+    <li>Ổi</li>
+    <li>Dưa Hấu</li>
+    <li>Táo</li>
+    <li>Xoài</li>
+    <li>Cam</li>
+    <li>Chôm Chôm</li>
+    <li>Măng Cụt</li>
+   </ul>
+    <input type="text" id="demo">
+    <button onclick="clllll()">Xem giá</button>
+    <h3 id="sell">Giá</h3>
+    
+    <script>
+        
+        function clllll(){
+            let texttt= document.getElementById('demo').value;
+        let gia1 =20000
+        let gia2 =30000
+        let gia3 =40000
+        let gia4 =50000
+            switch (texttt){
+                case "Ổi":
+                   
+                case 'Dưa Hấu':
+                document.getElementById('sell').innerHTML ='Giá ' + gia1 + ' VND/KG'
+                    break
+                case 'Táo':
+                case 'Xoài':
+                document.getElementById('sell').innerHTML ='Giá ' + gia2 + ' VND/KG'
+                break
+
+                case 'Cam':
+                case 'Chôm Chôm':
+                document.getElementById('sell').innerHTML ='Giá ' + gia3  + ' VND/KG'
+                
+                case 'Cam':
+                document.getElementById('sell').innerHTML ='Giá ' + gia4  + ' VND/KG'
+                
+                default:
+    
+                document.innerHTML = 'KHÔNG CÓ LOẠI NÀY'
+
+
+
+               
+            }
+        }
+
+    </script>
+</body>
+</html>
