@@ -1,0 +1,10 @@
+.butt{
+    border-radius: 5px;
+    background-color: rgb(159, 187, 178);
+    width: 130px;
+    height: 30px;
+}
+.butt:hover{
+    background-color: rgb(154, 154, 235);
+    color:rgb(185, 83, 16)
+}
