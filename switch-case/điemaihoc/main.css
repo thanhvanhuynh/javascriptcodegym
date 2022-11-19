@@ -1,0 +1,17 @@
+.input{
+    display: flex;
+ 
+    margin-right: 20px;
+}
+.input input{
+   margin-left: 40px;
+   margin-top: 10px;
+   height: 30px;
+  
+    
+}
+#chon{
+    margin-left: 40px;
+    height: 30px;
+    margin-top: 10px;
+}

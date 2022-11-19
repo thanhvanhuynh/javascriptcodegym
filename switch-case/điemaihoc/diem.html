@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính điểm ĐH khối D</h2>
+   <div class="input_container">
+    <div class="input">
+        <h3>Môn Toán</h3>
+        <input type="number" id="1">
+    </div>
+    <div class="input">
+        <h3>Môn Văn</h3>
+        <input type="number" id="2">
+    </div>
+    <div class="input">
+        <h3>Môn Anh</h3>
+        <input type="number" id="3">
+    </div>
+    <div class="input">
+        <h3>Khu Vực</h3>
+        <select name="dertty" id="chon">
+            <option value= "k1">kv1</option>
+            <option value="k2">kv2</option>
+            <option value="k3">kv3</option>
+            <option value="k2nt">kv2 NT</option>
+        </select>
+    </div>
+   </div>
+    <br>
+    <button onclick="tinh()">Tính điểm</button>
+    <h2 id="tinhdiem">'Tổng điểm : </h2>
+    <script>
+       
+function tinh(){
+    let toan = +document.getElementById("1").value
+    console.log(toan)
+        let van = +document.getElementById("2").value
+        console.log(van)
+        let anh = +document.getElementById("3").value
+        console.log(anh)
+        let kv1 = document.getElementById("chon").value 
+        console.log(kv1)
+        let scoress = 0
+       if (toan < 0 || van <0 || anh < 0 ){
+        alert('so diem phai tu 0 den 10')
+       } if (toan > 10 || van > 10 || anh>10) {
+        alert('so diem phai tu 0 den 10')
+       } else {
+        switch(kv1){
+            case 'k1':
+            scoress= toan + anh +van + 0.75
+            document.getElementById('tinhdiem').innerHTML= 'Tổng điểm : ' + scoress + ' điểm'
+            case 'k2':
+            scoress= toan + anh +van + 0.5
+            document.getElementById('tinhdiem').innerHTML= 'Tổng điểm : ' + scoress + ' điểm'
+            case 'k3':
+            scoress= toan + anh +van 
+            document.getElementById('tinhdiem').innerHTML= 'Tổng điểm : ' + scoress + ' điểm'
+            default :
+            scoress= toan + anh +van + 0.25
+            document.getElementById('tinhdiem').innerHTML= 'Tổng điểm : ' + scoress + ' điểm'
+
+            
+        }
+       }
+
+    // if(toan === 0 ){
+    //     alert('chưa đúng bạn phải nhập 0=>10')
+    // }
+    // if(van < 0 && van > 10){
+    //     alert('chưa đúng bạn phải nhập 0=>10')
+    // }
+    // if(anh < 0 && anh >10){
+    //     alert('chưa đúng bạn phải nhập 0=>10')      
+    //         }
+   
+
+        }
+    
+     
+
+    </script>
+</body>
+</html>
