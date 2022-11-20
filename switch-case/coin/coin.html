@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>AMOUNT</h2>
+        <input type="number " id="amo">
+        <h2>From Currency</h2>
+        <select name="" id="country_1">
+            <option value="vn">VietNam</option>
+            <option value="usa">USD</option>
+        </select>
+        <h2>To Currency</h2>
+        <select name="" id="country_2">
+            <option value="usa">USD</option>
+            <option value="vn">VietNam</option>
+        </select>
+        <br>
+        <button onclick="convert()" class="butt" style="background-color:  rgb(227, 194, 194); margin-top: 30px;">Convert</button>
+        <h2 id="chuyendoi"></h2>
+
+
+    </div>
+    <script>
+        function convert(){
+            let amor = document.getElementById('amo').value
+            let frommm = document.getElementById('country_1').value
+            let tooo = document.getElementById('country_2').value
+            let vnToUsd = amor/23000
+            let usdToVN = amor*23000
+            if (frommm==='vn' && tooo ==='usa'){
+                document.getElementById('chuyendoi').innerHTML= vnToUsd + ' USD'
+
+            }else if(frommm==='usa' && tooo ==='vn'){
+                document.getElementById('chuyendoi').innerHTML= usdToVN + ' VND'
+
+
+            }else if(frommm==='usa' && tooo ==='usa'){
+                document.getElementById('chuyendoi').innerHTML= 'Hay chon 2 dong tien khac nhau'
+            }
+            else{
+                document.getElementById('chuyendoi').innerHTML= 'Hay chon 2 dong tien khac nhau'
+            }
+
+        }
+    </script>
+</body>
+</html>
