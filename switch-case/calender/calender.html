@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Nhập năm dương lịch: </h2>
+        <input type="number" id="year">
+        <button onclick="tinh()"> Năm âm lịch</button>
+        <h2 id="sect"> Năm âm lịch tương ứng : </h2>
+    </div>
+    <script>
+        function tinh(){
+            let nam = +document.getElementById('year').value
+            let can = nam%10
+            let chi = nam%12
+            switch (can){
+                case 0:
+                a = 'Canh '
+                    break
+                case 1:
+                a = 'Tân '
+                    break
+                case 2:
+                a = 'Nhâm '
+                    break
+                case 3:
+                a = 'Quý '
+                    break
+                case 4:
+                a = 'Giáp '
+                    break
+                case 5:
+                a = 'Ất '
+                    break
+                case 6:
+                a = 'Bính '
+                    break
+                case 7:
+                a = 'Đinh '
+                    break
+                case 8:
+                a = 'Mậu '
+                    break
+                case 9:
+                a = 'Kỷ '
+                    break
+                    
+            }
+            switch(chi){
+                case 0:
+                b  = 'Thân'
+                    break
+                case 1:
+                b  = 'Dậu'
+                    break
+                case 2:
+                b  = 'Tuất'
+                    break
+                case 3:
+                b  = 'Hợi'
+                    break
+                case 4:
+                b  = 'Tý'
+                    break
+                case 5:
+                b  = 'Sửu'
+                    break
+                case 6:
+                b  = 'Dần'
+                    break
+                case 7:
+                b  = 'Mẹo'
+                    break
+                case 8:
+                b  = 'Thìn'
+                    break
+                case 9:
+                b  = 'Tỵ'
+                    break
+                case 10:
+                b  = 'Ngọ'
+                    break
+                case 11:
+                b  = 'Mùi'
+                    break
+
+            }
+            document.getElementById('sect').innerHTML= 'Năm âm lịch tương ứng : ' + a  +  b
+
+        }
+    </script>
+</body>
+</html>
