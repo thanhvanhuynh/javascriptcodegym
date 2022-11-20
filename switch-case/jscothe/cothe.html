@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hei">
+        <h2>Nhập chiều cao (cm)</h2>
+        <input type="text" id="hei-cc">
+    </div>
+    <div class="wei">
+        <h2>Nhập cân nặng (kg)</h2>
+        <input type="text" id="wei-dd">
+    </div>
+    <br>
+    <button onclick="tinh()">Tính BMI</button>
+    <button onclick="nhaplai()">Nhập lại</button>
+    <div class="bmitiy">
+        <h2 id="bmi"></h2>
+        
+    </div>
+    <script> 
+    
+        function tinh(){
+            var heg = +document.getElementById('hei-cc').value
+           var heg2 = heg/100
+           var Wegg = +document.getElementById('wei-dd').value
+            var bmitth = Wegg/( heg2*heg2)
+           if(bmitth <16){
+            console.log('th')
+            document.getElementById('bmi').innerHTML = 'Gầy độ III'
+            }
+           else if (bmitth >=16 && bmitth < 17){
+            console.log('1')
+            document.getElementById('bmi').innerHTML = 'Gầy độ II'}
+           
+            else if (bmitth >=17 && bmitth < 18.5){
+                console.log('2')
+            document.getElementById('bmi').innerHTML = 'Gầy độ I'}
+            else if (bmitth >=18.5 && bmitth < 25){console.log('3')
+            document.getElementById('bmi').innerHTML = 'Bình thường'}
+            else if (bmitth >=25 && bmitth < 30){console.log('4')
+            document.getElementById('bmi').innerHTML = 'Thừa cân'}
+            else if (bmitth >=30 && bmitth < 35){console.log('5')
+            document.getElementById('bmi').innerHTML = 'Béo phì độ I'}
+            else if (bmitth >=35 && bmitth < 40){console.log('6')
+            document.getElementById('bmi').innerHTML = 'Béo phì độ II'}
+            else if (bmitth >= 40){console.log('7')
+            document.getElementById('bmi') = 'Béo phì độ III'}
+            
+            }
+            function nhaplai(){
+                document.getElementById('hei-cc').value = ''
+                document.getElementById('wei-dd').value = ''
+                document.getElementById('bmi').innerHTML = 'Vui long nhap lai'
+          
+       
+        }    
+
+    </script>
+</body>
+</html>
